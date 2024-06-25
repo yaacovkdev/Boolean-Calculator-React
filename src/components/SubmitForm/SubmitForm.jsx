@@ -7,6 +7,8 @@ export default function SubmitForm() {
   const inputFormula = useRef();
   const [tableData, setTableData] = useState(null);
   const [errorMessage, setErrorMessage] = useState(false);
+
+  //clears modal when server connected
   const [serverConnected, setServerConnected] = useState(false);
   const wss = useRef(null);
 
@@ -19,7 +21,6 @@ export default function SubmitForm() {
 
     wss.current.onmessage = (event) => {
       const response = JSON.parse(event.data);
-      console.log(response.status);
 
       if (response.status === 200) {
         setTableData(response.data);
