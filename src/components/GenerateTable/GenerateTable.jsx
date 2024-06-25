@@ -1,7 +1,6 @@
 import "./GenerateTable.scss";
 
-function GenerateTable({ data }) {
-  console.log(data);
+export default function GenerateTable({ data }) {
   if (data === null) return;
 
   const [t, f] = ["T", "F"];
@@ -40,5 +39,3 @@ function GenerateTable({ data }) {
     </table>
   );
 }
-
-export default GenerateTable;
