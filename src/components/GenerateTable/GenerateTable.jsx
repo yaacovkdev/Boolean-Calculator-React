@@ -3,13 +3,15 @@ import "./GenerateTable.scss";
 export default function GenerateTable({ data }) {
   if (data === null) return;
 
+  console.log(data);
+
   const [t, f] = ["T", "F"];
   let thid = 0;
   const form_head = (
-    <thead className="row-green">
+    <thead>
       <tr key={`1`}>
-        {data.map((col) => (
-          <th key={`1-${++thid}`}>{col[0]}</th>
+        {data.map((col, index) => (
+          <th key={`1-${++thid}`} className={index === data.length - 1 ? "results" : null}>{col[0]}</th>
         ))}
       </tr>
     </thead>
@@ -22,9 +24,9 @@ export default function GenerateTable({ data }) {
     let tdid = 0;
 
     entries.push(
-      <tr key={i + 1}>
+      <tr key={i + 1} className={data[data.length-1][i] ? "green-row" : "red-row"}>
         {data.map((col) => (
-          <td key={`${i + 1}-${++tdid}`}>{col[i] ? t : f}</td>
+          <td key={`${i + 1}-${++tdid}`} title={`Var: ${col[0]}`}>{col[i] ? t : f}</td>
         ))}
       </tr>
     );

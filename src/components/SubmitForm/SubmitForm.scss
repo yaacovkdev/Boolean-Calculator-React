@@ -6,11 +6,13 @@ $boolean-green: #5fad63;
 $boolean-red: #eb2c2c;
 
 .submit-form {
+  padding: 2rem 0;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  gap: 3rem;
 
   &__input {
     width: 80%;
@@ -74,8 +76,8 @@ $boolean-red: #eb2c2c;
 
   #text-tag {
     position: absolute;
-    right: -5rem;
-    top: 2.5rem;
+    right: -6rem;
+    top: 2.75rem;
     z-index: -1;
     rotate: -30deg;
     color: $boolean-red;

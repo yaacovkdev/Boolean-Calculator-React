@@ -63,7 +63,7 @@ export default function SubmitForm() {
                 Solve
               </button>
             </div>
-            <p id="text-tag">Finally Here!</p>
+            <p id="text-tag">Updates Soon!</p>
           </div>
 
           <div className="submit-form__output">

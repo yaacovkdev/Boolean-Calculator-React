@@ -20,10 +20,15 @@ export default function StatusModal() {
   return (
     <div className="status-modal">
       <div className="status-modal__body">
-        <h4>
-          <span className="text">Connecting to server</span>
-          <span className="dot-anim">.</span>
-        </h4>
+        <div className="status-modal__content">
+          <h4>
+            <span className="status-modal__text">Connecting to server</span>
+            <span className="dot-anim">.</span>
+          </h4>
+          <h6>
+            <p>It usually takes 1-2 minutes for the server to start.</p>
+          </h6>
+        </div>
       </div>
     </div>
   );
