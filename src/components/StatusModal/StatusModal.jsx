@@ -26,7 +26,7 @@ export default function StatusModal() {
             <span className="dot-anim">.</span>
           </h4>
           <h6>
-            <p>It usually takes 1-2 minutes for the server to start.</p>
+            <p>If you see this message restart this page after 1 or 2 minutes please.</p>
           </h6>
         </div>
       </div>
