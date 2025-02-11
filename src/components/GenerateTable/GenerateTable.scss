@@ -1,6 +1,39 @@
 @use "/src/styles/mixins" as *;
 table {
   font-size: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .results {
+    padding-left: 1.5rem;
+  }
+  tbody {
+    tr {
+      td {
+        padding: 0.25rem;
+        min-width: 44px;
+        height: 44px;
+
+        &:first-of-type {
+          border-radius: 22px 0 0 22px;
+        }
+
+        &:last-of-type {
+          border-radius: 0 22px 22px 0;
+        }
+      }
+
+
+
+      &.green-row td {
+        background-color: lightgreen;
+      }
+      &:not(.green-row) td
+      {
+        background-color: pink;
+      }
+    }
+  }
 
   @include tablet {
     font-size: 1.5rem;
